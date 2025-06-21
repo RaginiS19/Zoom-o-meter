@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zoom-o-Meter</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="zoom-wrapper">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <span>Zoom Meeting</span>
+      <span id="meetingTimer">00:00</span>
+    </div>
+
+    <!-- Video Grid -->
+    <div class="video-grid">
+      <div class="video-box">
+        <div class="video-feed">Ragini S.</div>
+        <div class="status-bar">🎤 🔴</div>
+      </div>
+      <div class="video-box">
+        <div class="video-feed">Alex G.</div>
+        <div class="status-bar">🔇 ⬛</div>
+      </div>
+      <div class="video-box">
+        <div class="video-feed">Samira D.</div>
+        <div class="status-bar">🎤 🔴</div>
+      </div>
+      <div class="video-box">
+        <div class="video-feed">Guest 4</div>
+        <div class="status-bar">🔇 ⬛</div>
+      </div>
+    </div>
+
+    <!-- Zoom-o-Meter -->
+    <div class="meter-section">
+      <div class="meter">
+        <div class="fill" id="meterFill"></div>
+      </div>
+      <p class="feedback" id="feedback">Waiting for input...</p>
+    </div>
+
+    <!-- Bottom Controls -->
+    <div class="bottom-bar">
+      <button id="speakBtn">🎤 Mute</button>
+      <button id="muteBtn">🔇</button>
+      <button>💻 Share Screen</button>
+      <button id="reactionBtn">😀 Reactions</button>
+      <button id="leaveBtn" class="leave">🚪 Leave</button>
+    </div>
+
+    <!-- Chat Popup -->
+    <div class="chat-popup" id="chatPopup">
+      <p><strong>Alex:</strong> Can someone share the slides?</p>
+      <p><strong>Samira:</strong> Sorry I'm late 😅</p>
+    </div>
+
+    <!-- Crash Overlay -->
+    <div class="overlay" id="crashOverlay">
+      <p>🔌 Zoom Crashed!</p>
+    </div>
+  </div>
+
+  <!-- Sound Effects -->
+  <audio id="beep" src="https://www.soundjay.com/buttons/sounds/beep-07.mp3"></audio>
+  <audio id="bark" src="https://www.soundjay.com/animals/dog-barking-01.mp3"></audio>
+  <audio id="muteSound" src="https://www.soundjay.com/button/beep-02.mp3"></audio>
+  <audio id="unmuteSound" src="https://www.soundjay.com/button/beep-03.mp3"></audio>
+  <audio id="reactionSound" src="https://www.soundjay.com/human/applause-01.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
